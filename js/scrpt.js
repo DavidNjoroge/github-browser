@@ -12,8 +12,8 @@ Repo.prototype.getRepos = function() {
     data = JSON.parse(dat)
     console.log(data);
     for (var i = 0; i < data.length; i++) {
-
-      $('#asdf').append('<li>' + data[i].name + '</li>')
+      $('.card').append('<div class="card-header">' + data[i].name + '</div>')
+      // $('#asdf').append('<li>' + data[i].name + '</li>')
     }
   }).fail(function(error) {
     console.log(error.responseJSON.message);

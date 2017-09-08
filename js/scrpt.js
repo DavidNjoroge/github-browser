@@ -6,7 +6,7 @@ function Repo() {
 
 
 Repo.prototype.getRepos = function(repoName) {
-  $.get('https://api.github.com/users/' + repoName + '/repos?access_token=' + apiKey).then(function(response) {
+  $.get('https://api.github.com/users/' + repoName + apiKey).then(function(response) {
 
     dat = JSON.stringify(response)
     data = JSON.parse(dat)

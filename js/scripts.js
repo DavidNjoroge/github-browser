@@ -1,6 +1,6 @@
-//var apiKey = require("./../.env").apiKey
+var apiKey = require("./../.env").apiKey
 
-var getRepos = function() {
+exports.getRepos = function() {
   $.get('https://api.github.com/users/DavidNjoroge/repos?access_token=' + 'cdd1b801556ff7943246cac4feaaf460fb0fad24').then(function(response) {
     dat = JSON.stringify(response)
     data = JSON.parse(dat)
@@ -24,18 +24,3 @@ var appender = function() {
     $('#asdf').append('<li>' + data[i].name + '</li>')
   }
 }
-
-
-
-
-
-
-$(document).ready(function() {
-
-  getRepos()
-
-
-
-  // appender()
-
-});
